@@ -28,6 +28,7 @@ body {
 /*Réglages de la partie nav */
 #logo{
     width: 200px;
+    display: block;
 }
 
 /*Réglages de la partie header */
@@ -57,6 +58,81 @@ h3 {
     font-size: 2rem;
 }
 
-/*Réglages de la partie main */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid var(--couleur-midfonce) 1px;
 
-/*Réglages de la partie aside */
+}
+
+#nav-bar {
+        width : 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        padding: 5px; 
+}
+
+ .nav-button {
+    font-size: 2rem;
+    text-decoration: none;
+    display: block;
+    background-color: var(--couleur-midfonce);
+    color: #E7D283;
+    padding: 8px;
+    width: 18%;
+    margin: 8px;
+    text-align: center;
+    border-radius: 10px;
+
+ }
+ .nav-button:hover {
+    background-color: var(--couleur-midclaire);
+    color: var(--couleur-fonce);
+    border: solid var(--couleur-midclaire) 2px;
+ }
+
+/*Réglages de la partie main et aside*/
+#rangement {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    padding: 20px;
+
+
+}
+main {
+    width: 75%;
+}
+
+article {
+    box-shadow: var(--couleur-fonce) 2px 2px 5px 0;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+aside {
+    width: 20%;
+}
+/* image et vidéo*/
+
+#video-e2c {
+   max-width: 100%;
+}
+
+#lecture {
+max-width: 100%;
+}
+
+#prepa-num {
+max-width: 100%;
+}
+
+#festnum {
+max-width: 100%;
+}
