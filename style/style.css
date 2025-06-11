@@ -36,13 +36,19 @@ header {
     background:radial-gradient(circle at 35%,var(--couleur-midfonce),var(--couleur-midclaire));
     font-family: "police-principale";
     height: 25vh;
-    padding: 20px;
-    
+    padding: 30px;
+    position: relative;
+    top: 18vmin;    
     
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
 h1 {
@@ -52,6 +58,7 @@ h1 {
 
 h2 {
     font-family: "police-principale";
+    margin-bottom: 5px;
 }
 
 h3 {
@@ -64,6 +71,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     border-bottom: solid var(--couleur-midfonce) 1px;
+    position: fixed;
+    width: 100vw;
+    background-color: var(--couleur-midclaire);
+    z-index: 10;
+    height: 18vmin;
 
 }
 
@@ -87,10 +99,11 @@ nav {
     margin: 8px;
     text-align: center;
     border-radius: 10px;
+    transition: background-color 500ms, color 1000ms, border 1000ms;
 
  }
  .nav-button:hover {
-    background-color: var(--couleur-midclaire);
+    background-color: var(--couleur-claire);
     color: var(--couleur-fonce);
     border: solid var(--couleur-midclaire) 2px;
  }
@@ -103,7 +116,8 @@ nav {
     justify-content: space-between;
     align-items: start;
     padding: 20px;
-
+    position: relative;
+    top: 18vmin;
 
 }
 main {
@@ -111,28 +125,92 @@ main {
 }
 
 article {
-    box-shadow: var(--couleur-fonce) 2px 2px 5px 0;
+    box-shadow: var(--couleur-claire) 2px 2px 5px 0;
     padding: 10px;
     margin-bottom: 10px;
+    transition: transform 1000ms;
+}
+
+article:hover {
+    transform: translate3d(2vh, 2vh, 0);
+}
+
+#text1-contenant {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+#text1 {
+    width: 60%;
+    padding-right: 7px;
+
+}
+
+iframe {
+    display: block;
+    width: 40%;
+    border-radius: 5%;
+
 }
 
 aside {
-    width: 20%;
+    width: 22%;
+    position: fixed;
+    top: 20vmin;
+    right: 30px;
+
+
 }
 /* image et vidéo*/
 
 #video-e2c {
    max-width: 100%;
+
 }
 
 #lecture {
 max-width: 100%;
+width: 40%;
+float: right;
+padding-left: 7px;
 }
 
 #prepa-num {
 max-width: 100%;
+margin-top: 1px;
 }
 
 #festnum {
 max-width: 100%;
+}
+
+aside>article {
+    padding: 15px;
+    background-color: var(--couleur-midfonce);
+    color: var(--couleur-claire);
+    border: solid var(--couleur-midclaire);
+    border-radius: 10px;
+}
+
+/* design intertext*/
+
+.intertext {
+    width: 100%;
+    aspect-ratio: 1904/640;
+    background-image: url(../src/bib2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
+.intertext2 {
+    width: 100%;
+    aspect-ratio: 1904/640;
+    background-image: url(../src/bib1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
 }
