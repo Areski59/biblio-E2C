@@ -214,3 +214,63 @@ aside>article {
     background-size: 100%;
     
 }
+
+#main-game {
+    position: relative;
+    top: 19vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 25px;
+    font-size: 1.5rem;
+}
+
+#user-interface {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#user-number {
+    font-size: 1.5rem;
+    width: 15vw;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--couleur-midfonce);
+    border: none;
+}
+
+#user-number:focus {
+    background-color: var(--couleur-midclaire);
+    color: var(--couleur-midfonce);
+}
+
+#send-button {
+    display: block;
+    font-size: 1.5rem;
+    padding: 5px;
+    margin-left: 20px;
+    background-color: var(--couleur-midfonce);
+    border-radius: 10px;
+    box-shadow: var(--couleur-midclaire) 3px 3px 5px 0;
+    transition: box-shadow 250ms, background-color 250ms;
+    border: none;
+
+}
+
+#send-button:hover {
+    background-color: var(--couleur-fonce);
+    box-shadow: 0 0 0 0;
+}
+
+.result-line {
+    font-family: "police-principale";
+    border: var(--couleur-midfonce);
+    border-radius: 5px;
+    font-size: 1.8rem;
+    margin: 10px;
+}
