@@ -113,7 +113,7 @@ nav {
     width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
     padding: 20px;
     position: relative;
@@ -160,8 +160,8 @@ aside {
     width: 22%;
     position: fixed;
     top: 20vmin;
-    right: 30px;
-
+    right: -33%;
+    transition: right 500ms;
 
 }
 /* image et vidéo*/
@@ -273,4 +273,39 @@ aside>article {
     border-radius: 5px;
     font-size: 1.8rem;
     margin: 10px;
+}
+
+/*Réglages js*/
+
+#news-trigger {
+    position: fixed;
+    writing-mode: vertical-rl;
+    top: 45vh;
+    right: 0;
+    background-color: var(--couleur-claire);
+    color: var(--couleur-fonce);
+    text-orientation: mixed;
+    padding: 10px;
+    border-top: var(--couleur-midfonce) 3px;
+    border-left: var(--couleur-midfonce) 3px;
+    border-bottom: var(--couleur-midfonce) 3px;
+    border-radius: 10px 0 0 10px;
+    z-index: 10;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+#close {
+    position: absolute;
+    right: 0;
+    top: -2vh;
+    background-color: var(--couleur-midfonce);
+    color: var(--couleur-claire);
+    border: solid var(--couleur-midclaire);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 900;
+
 }
