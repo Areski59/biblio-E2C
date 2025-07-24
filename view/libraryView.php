@@ -21,15 +21,9 @@
 
     </nav>  
     <!-- En tête stylée-->  
-     <header>
-
-        <h1>Des livres et des histoires</h1>
-
-
-
-        <h3>Bibliothèque de l'E2C</h3>
-
-     </header>
+    <?php
+        require_once("../view/partials/_header.php")
+    ?>
 
 </body>
 <script src="../script/test.js"></script>

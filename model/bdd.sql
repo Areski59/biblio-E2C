@@ -128,3 +128,61 @@ CREATE TABLE IF NOT EXISTS book (
         FOREIGN KEY (user_id)
         REFERENCES user(id)
 )ENGINE=InnoDB;
+
+CREATE VIEW book_vw AS (
+    SELECT book.id, book.titre, book.auteur, genre.name AS genre, site.city AS site, book.year AS "année", book.page
+    FROM book
+    INNER JOIN genre ON book.genre_id = genre.id
+    INNER JOIN site ON book.site_id = site.id
+);
+
+SELECT titre, auteur, genre FROM book_vw WHERE site = "Roubaix";
+
+SELECT , Count(id) AS "nombre" FROM book_vw GROUP BY site;
+
+UPDATE book
+SET user_id = 5
+WHERE id = 72;
+
+SELECT user.user_name, user.mail, book.titre
+FROM user
+INNER JOIN book ON book.user_id = user.id;
+
+SELECT user.user_name, user.mail, book.titre
+FROM user
+LEFT JOIN book ON book.user_id = user.id;
+
+SELECT user.user_name, user.mail, book.titre
+FROM user
+INNER JOIN book ON book.user_id = user.id;
+
+SELECT user.user_name, user.mail, book.titre
+FROM user
+INNER JOIN book ON book.user_id = user.id;
+
+/*commentaires*/
+
+CREATE TABLE IF NOT EXISTS comment (
+    comment_content TEXT not NULL,
+    user_id SMALLINT UNSIGNED NOT NULL,
+    book_id INT UNSIGNED NOT NULL,
+    PRIMARY KEY (user_id, book_id),
+    CONSTRAINT fk_comment_user
+        FOREIGN KEY (user_id)
+        REFERENCES user(id),
+    CONSTRAINT fk_comment_book
+        FOREIGN KEY (book_id)
+        REFERENCES book(id)
+)ENGINE=InnoDB;
+
+INSERT INTO comment (user_id, book_id, comment)
+VALUES (4, 276, "C'est nul à chier, quelle perte de temps"),
+       (4, 289, "J'ai jamais lu un truc aussi merdique")
+       (5, 252, "Masterclass tié un tigre");
+
+CREATE VIEW comment_vw AS (
+    SELECT comment.book_id, book.titre, user.user_name AS utilisateur, comment.comment_content AS commentaire
+    FROM book
+    INNER JOIN comment ON comment.book_id = book.id
+    INNER JOIN user ON comment.user_id = user.id
+);

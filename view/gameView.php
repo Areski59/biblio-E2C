@@ -19,16 +19,11 @@
         </div>
 
     </nav>  
+
+    <?php
+        require_once("../view/partials/_header.php")
+    ?>
     <!-- En tête stylée-->  
-     <header>
-
-        <h1>Espace détente</h1>
-
-
-
-        <h3>Je kiff le JavaScript</h3>
-
-     </header>
      
      <div id="main-game">
         <div id="user-interface">
