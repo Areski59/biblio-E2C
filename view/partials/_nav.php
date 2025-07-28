@@ -5,10 +5,10 @@
             <?php
                 foreach($navList as $navButton) {
                 ?>
-                <a class="nav-button" href=<?= $navButton["path"]?>><?=$navButton["path"]?></a>
+                <a class="nav-button" href=<?= $navButton["path"]?>><?=$navButton["label"]?></a>
             <?php
             }
             ?>
         </div>
 
-    </nav>
+</nav>

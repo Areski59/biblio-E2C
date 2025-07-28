@@ -10,18 +10,10 @@
 </head>
 <body>
     <!-- Zone du menu, en haut de la page-->    
-    <nav>
-
-        <img id="logo" src="../src/logo2.png" alt="logo E2C">
-        <div id="nav-bar">
-        <a class="nav-button" href="../index.htm">Accueil</a>
-        <a class="nav-button" href="../pages/library.htm">Bibliothèque</a>
-        <a class="nav-button" href="../pages/game.htm">Détente</a>
-        </div>
-
-    </nav>  
+    
     <!-- En tête stylée-->  
     <?php
+    require_once("../view/partials/_nav.php");
         require_once("../view/partials/_header.php")
     ?>
 
