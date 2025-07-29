@@ -14,6 +14,13 @@
      <?php
             require_once("../view/partials/_nav.php");
             require_once("../view/partials/_header.php");
+            require_once("../view/partials/_connect.php");
+            if(isset($_GET["message"])) {
+                require_once("../view/partials/_flashMessage.php");
+            }
+    if(isset($_SESSION["userId"])) {
+        require_once("../view/partials/_footer.php");
+    }
             
      ?>
 
@@ -71,21 +78,7 @@
        <div id="news-trigger">
         <p>BREAKING NEWS</p>
        </div>
-
-       <div id="connect-box">
-            <form action="../controller/loginController.php" method="post">
-            <div class  ="connect-line">
-                <label for="email">email</label>
-                <input type="mail" id="email" name="email" required>
-            </div>
-            <div class="connect-line">
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <input type="submit" value="Envoyer" class="form-button">
-
-            </form>
-       </div>
-</body>
-<script src="./script/news.js" ></script>
+<script src="../script/news.js" ></script>
+<script src="../script/connect.js" ></script>
+<script src="../script/flash.js" ></script>
 </html>

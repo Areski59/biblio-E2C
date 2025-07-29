@@ -325,6 +325,7 @@ aside>article {
 
     
     padding: 1vh 2vw;
+    display: none;
 
 }
 
@@ -368,4 +369,31 @@ aside>article {
     border-radius: 10px;
     transition: background-color 500ms, color 1000ms, border 1000ms;
 
+}
+
+#flash-message {
+    position: fixed;
+    top: 5vh;
+    right: 43vw;
+    width: 50vw;
+    background-color: var(--couleur-fonce);
+    color: var(--couleur-claire);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: black 2px 2px 4px 0;
+    user-select: none;
+    transition: right 1200ms;
+    z-index: 20;
+}
+
+footer {
+    position: fixed;
+    bottom: 0vh;
+    z-index: 20;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-top: white 1px solid;
+    width: 100vh;
+    font-size: 1.2rem;
 }
